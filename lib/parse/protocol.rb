@@ -183,5 +183,9 @@ module Parse
     def self.batch_request_uri
       "/#{VERSION}/#{BATCH_REQUEST_URI}"
     end
+
+    def self.event_uri(name)
+      "/#{VERSION}/events/#{name}"
+    end
   end
 end

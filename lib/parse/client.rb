@@ -122,6 +122,10 @@ module Parse
     def user(data)
       Parse::User.new(data, self)
     end
+
+    def track(event, dimensions = {})
+      post(Protocol.event_uri(event), { dimensions: dimensions })
+    end
   end
 
   # Module methods
